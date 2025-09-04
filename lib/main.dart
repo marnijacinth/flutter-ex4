@@ -74,7 +74,7 @@ class _ProductBillingAppState extends State<ProductBillingApp> {
 
   // Calculates the total bill, GST, and finds the highest priced product
   void _calculateBill() {
-    _totalAmount = _products.fold(0, (sum, item) => sum + item.subtotal);
+    _totalAmount = _products.fold(0, (sum, item) => sum + item.subtotal);         // after adding new item each time it repeates the process and shows new total 
 
 
     if (_totalAmount > 1000) {
@@ -108,6 +108,7 @@ class _ProductBillingAppState extends State<ProductBillingApp> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  //-------------------------------------------------------
                   TextFormField(
                     controller: _productNameController,
                     decoration: InputDecoration(
@@ -123,7 +124,7 @@ class _ProductBillingAppState extends State<ProductBillingApp> {
                   ),
 
 
-                  SizedBox(height: 15),
+                  SizedBox(height: 15),  //------------------------------------------
 
 
                   TextFormField(
@@ -148,7 +149,7 @@ class _ProductBillingAppState extends State<ProductBillingApp> {
                   ),
 
 
-                  SizedBox(height: 15),
+                  SizedBox(height: 15),  //------------------------------------------
 
 
                   TextFormField(
@@ -171,7 +172,8 @@ class _ProductBillingAppState extends State<ProductBillingApp> {
                       return null;
                     },
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 15),  //------------------------------------------
+                  
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.indigo,
